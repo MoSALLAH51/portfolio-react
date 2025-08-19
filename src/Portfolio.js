@@ -300,7 +300,7 @@ export default function Portfolio() {
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent drop-shadow-lg" style={{
             textShadow: '0 0 30px rgba(34, 211, 238, 0.3)'
           }}>
-            MOHAMED SALLAH
+            MOHAMAD SALLAH
           </h1>
           
           <div className="mb-8 overflow-hidden">
