@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from "./components/ui/Card";
 import { Button } from "./components/ui/Button";
-import { Mail, Github, Linkedin, ExternalLink, Code, Smartphone, Database, ChevronDown, Star, Zap, Rocket, ChevronLeft, ChevronRight, Play, X } from "lucide-react";
+import { Mail, Github, Linkedin, ExternalLink, Code, Smartphone, Database, Archive, ChevronDown, Star, Zap, Rocket, ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 
 const projects = [
 {
@@ -81,6 +81,23 @@ images: [
 ]
 
   },
+  {   
+    id: 5, 
+    title: "Premier League Dataset Collection",
+    description: "Collected 1,140+ Premier League match samples over 3 seasons for predictive analysis. Dataset available on Kaggle.",
+    fullDescription: "Comprehensive dataset of Premier League matches including scores, player stats, team performance, and historical trends. This dataset powers predictive models and statistical analysis in football applications. Fully available for download and exploration on Kaggle.",
+    technologies: ["Python", "Web Scraping", "Pandas", "NumPy"],
+    link: "https://www.kaggle.com/datasets/mohamadsallah5/english-premier-league-stats20212024", 
+    github: "#", // إذا لم يكن هناك كود مرتبط
+    video: "#", // اختياري
+    type: "dataset",
+    gradient: "from-green-400 via-lime-500 to-yellow-500",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/mo%20football%2FPremier_League_Logo.svg.png?alt=media&token=8449e33f-62dd-4894-aa79-da1c2a97d19d"
+    ]
+},
+
+
 
 ];
 
@@ -95,11 +112,17 @@ const skills = [
 
 const getProjectIcon = (type) => {
   switch(type) {
-    case 'mobile': return <Smartphone className="w-6 h-6" />;
-    case 'web': return <Code className="w-6 h-6" />;
-    default: return <Database className="w-6 h-6" />;
+    case 'mobile': 
+      return <Smartphone className="w-6 h-6" />;
+    case 'web': 
+      return <Code className="w-6 h-6" />;
+    case 'dataset': 
+      return <Database className="w-6 h-6" />;
+    default: 
+      return <Database className="w-6 h-6" />;
   }
 };
+
 
 // Image Carousel Component
 const ImageCarousel = ({ images, projectTitle }) => {
