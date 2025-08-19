@@ -88,8 +88,8 @@ images: [
     fullDescription: "Comprehensive dataset of Premier League matches including scores, player stats, team performance, and historical trends. This dataset powers predictive models and statistical analysis in football applications. Fully available for download and exploration on Kaggle.",
     technologies: ["Python", "Web Scraping", "Pandas", "NumPy"],
     link: "https://www.kaggle.com/datasets/mohamadsallah5/english-premier-league-stats20212024", 
-    github: "#", // إذا لم يكن هناك كود مرتبط
-    video: "#", // اختياري
+    github: "", 
+    video: "", 
     type: "dataset",
     gradient: "from-green-400 via-lime-500 to-yellow-500",
     images: [

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./components/ui/Button";
-import { ArrowLeft, Github, Play, ChevronLeft, ChevronRight, Star, Zap, ExternalLink, Code, Smartphone, Database, Download } from "lucide-react";
+import { ArrowLeft, Github, Play, ChevronLeft, ChevronRight, Star, Zap, ExternalLink, Code, Smartphone, Database, Download, Link } from "lucide-react";
 import projects from "./Portfolio"; // ✅ بدون أقواس
 import { useParams, useLocation } from "react-router-dom";
 
@@ -327,6 +327,17 @@ export default function ProjectDetailPage() {
                     <Play className="w-8 h-8 mr-3 group-hover:animate-pulse" />
                     Watch Video
                     <Zap className="w-6 h-6 ml-3 group-hover:animate-bounce" />
+                  </Button>
+                )}
+
+                {projectData.link && projectData.link.trim() !== "" && (
+                  <Button 
+                    className="group bg-gradient-to-r from-purple-600 to-indigo-500 hover:from-purple-500 hover:to-indigo-400 px-12 py-6 text-xl rounded-full shadow-2xl shadow-purple-500/25 hover:shadow-indigo-400/25 transition-all duration-300 hover:scale-110 w-full md:w-auto border border-purple-400/30 hover:border-indigo-400/50"
+                    onClick={() => window.open(projectData.link, '_blank')}
+                  >
+                    <Link className="w-8 h-8 mr-3 group-hover:animate-pulse" />
+                    Visit Live Site
+                    <ExternalLink className="w-6 h-6 ml-3 group-hover:animate-bounce" />
                   </Button>
                 )}
 
