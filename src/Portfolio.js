@@ -85,7 +85,7 @@ images: [
 
 const skills = [
   { name: "Flutter", level: 90, icon: "📱" },
-  { name: "React", level: 50, icon: "⚛️" },
+  { name: "Javascript", level: 50, icon: "⚛️" },
   { name: "PHP", level: 80, icon: "🐘" },
   { name: "Python", level: 75, icon: "🐍" },
   { name: "Firebase", level: 85, icon: "🔥" },
@@ -270,7 +270,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              Mohamed Sallah
+              Mohamad Sallah
             </h1>
             <div className="flex gap-6">
               <a href="#projects" className="text-cyan-300 hover:text-cyan-200 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg">Projects</a>
@@ -308,7 +308,7 @@ export default function Portfolio() {
               CROSS-PLATFORM MOBILE ENGINEER
             </p>
             <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed mt-4">
-              Specializing in Flutter & React development with cutting-edge technologies
+              Specializing in Flutter & Ai development with cutting-edge technologies
             </p>
           </div>
           
@@ -534,7 +534,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-slate-900/60 border-t border-cyan-400/20 py-8 px-6 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-blue-200">© 2025 Mohamed Sallah. All rights reserved. Made with ❤️ and lots of ☕</p>
+          <p className="text-blue-200">© 2025 Mohamad Sallah. All rights reserved. Made with ❤️ and lots of ☕</p>
         </div>
       </footer>
     </main>
