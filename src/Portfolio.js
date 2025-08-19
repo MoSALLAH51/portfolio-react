@@ -48,7 +48,7 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
     description: "Flutter mobile app connected to PHP backend for inventory monitoring and warehouse management.",
     fullDescription: "Complete warehouse management solution with Flutter mobile app and PHP backend. Features include inventory tracking, stock level monitoring, barcode scanning, order management, supplier management, and real-time reporting. The system helps businesses optimize their warehouse operations and reduce inventory costs.",
     technologies: ["Flutter", "PHP", "MySQL", "REST API"],
-    link: "#",
+    link: "https://t.me/mosallah47/3",
     github: "https://github.com/MoSallah21/warehouses_app",
     video: "https://youtu.be/6eETaRxAC0I",
     type: "mobile",
