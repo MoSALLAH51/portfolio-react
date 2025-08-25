@@ -63,26 +63,9 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
     ]
   },
 
-    {   
-    id: 4, 
-    title: "Smart Football Platform",
-    description: "AI-powered football platform with match predictions, news, and tactical dashboard for enhanced analysis.",
-    fullDescription: "Smart AI Football app that predicts match results and provides comprehensive statistics. The app uses machine learning algorithms to analyze team performance, player statistics, and historical data to provide accurate match predictions. Features include live match tracking, tactical analysis dashboard, news feed, and detailed player statistics.",
-    technologies: ["Flutter", "Flask", "Python", "ML", "Firebase"],
-    link: "#",
-    github: "https://github.com/MoSallah21/Football-Platform",
-    video: "https://www.youtube.com/watch?v=4xse3TEU2ms&list=RDImrIX5AG9QU&index=14",
-    type: "mobile",
-    gradient: "from-cyan-400 via-blue-500 to-blue-600",
-images: [
-  "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/Noor%20Go%2FFeature%20Graphic.png?alt=media&token=20bed5d8-7855-4b14-8eb7-a6b2e85b3b0e",
-  "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop"
-]
 
-  },
   {   
-    id: 5, 
+    id: 4, 
     title: "Premier League Dataset Collection",
     description: "Collected 1,140+ Premier League match samples over 3 seasons for predictive analysis. Dataset available on Kaggle.",
     fullDescription: "Comprehensive dataset of Premier League matches including scores, player stats, team performance, and historical trends. This dataset powers predictive models and statistical analysis in football applications. Fully available for download and exploration on Kaggle.",
