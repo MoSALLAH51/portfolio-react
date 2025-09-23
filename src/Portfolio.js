@@ -84,13 +84,14 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
 
 ];
 
+
 const skills = [
-  { name: "Flutter", level: 90, icon: "📱" },
-  { name: "Javascript", level: 50, icon: "⚛️" },
-  { name: "PHP", level: 80, icon: "🐘" },
-  { name: "Python", level: 75, icon: "🐍" },
-  { name: "Firebase", level: 85, icon: "🔥" },
-  { name: "MySQL", level: 80, icon: "🗄️" }
+  { name: "Flutter", icon: "📱" },
+  { name: "Javascript", icon: "⚛️" },
+  { name: "PHP", icon: "🐘" },
+  { name: "Python", icon: "🐍" },
+  { name: "Firebase", icon: "🔥" },
+  { name: "MySQL", icon: "🗄️" }
 ];
 
 const getProjectIcon = (type) => {
@@ -450,6 +451,7 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
+      {/* Skills Section */}
       <section id="skills" className="py-20 px-6 bg-slate-800/20 backdrop-blur-sm relative">
         <div className="max-w-4xl mx-auto">
           <div 
@@ -467,7 +469,7 @@ export default function Portfolio() {
             <p className="text-xl text-blue-200">Technologies I work with</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
               <div 
                 key={index} 
@@ -478,26 +480,15 @@ export default function Portfolio() {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl group-hover:animate-bounce">{skill.icon}</span>
-                    <span className="font-bold text-lg text-cyan-100">{skill.name}</span>
-                  </div>
-                  <span className="text-cyan-400 font-bold text-lg">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-slate-700/50 rounded-full h-3 overflow-hidden border border-cyan-500/20">
-                  <div 
-                    className="bg-gradient-to-r from-cyan-400 to-blue-600 h-3 rounded-full transition-all duration-2000 group-hover:animate-pulse shadow-lg shadow-cyan-400/50"
-                    style={{ 
-                      width: isVisible[`skill-${index}`] ? `${skill.level}%` : '0%',
-                      transitionDelay: `${index * 200}ms` 
-                    }}
-                  ></div>
+                <div className="flex flex-col items-center text-center">
+                  <span className="text-4xl group-hover:animate-bounce mb-3">{skill.icon}</span>
+                  <span className="font-bold text-lg text-cyan-100">{skill.name}</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
       </section>
 
       {/* Contact Section */}
