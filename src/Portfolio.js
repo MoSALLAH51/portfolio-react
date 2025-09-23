@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "./components/ui/Card";
 import { Button } from "./components/ui/Button";
 import { Mail, Github, Linkedin, ExternalLink, Code, Smartphone, Database, ChevronDown, Star, Zap, Rocket, ChevronLeft, ChevronRight, Play, X, Menu } from "lucide-react";
-import { useNavigate } from "react-router-dom"; // إضافة useNavigate
+import { useNavigate } from "react-router-dom"; 
 
 const projects = [
 {
@@ -11,7 +11,7 @@ const projects = [
   description: "Saudi taxi booking app with real-time tracking, Socket integration, and Firebase connectivity.",
   fullDescription: "Noor Go is a feature-rich mobile application tailored for the Saudi Arabian market, offering a fast, modern, and reliable taxi booking experience. Built with a sharp focus on user convenience and real-time interactions, the app bridges passengers and drivers through smooth, low-latency communication and intuitive design. Key features include live GPS tracking, Socket.IO-powered live updates, Firebase integration for secure authentication and cloud storage, and intelligent trip management with support for future payment gateways.",
   technologies: ["Flutter", "Firebase", "Socket.IO", "Google Maps SDK", "Clean Architecture", "BLoC Pattern"],
-  link: "#",
+  link: "",
   github: "",
   video: "https://youtu.be/p720o-Gj6SI",
   type: "mobile",
@@ -31,7 +31,7 @@ title: "Work Accounts – Smart Accounting App",
 description: "AI-powered ERP-style accounting application built with Flutter and SQLite, featuring invoices, budgets, financial reports, and a built-in accounting chatbot assistant.",
 fullDescription: "Work Accounts is a comprehensive ERP-style accounting application developed with Flutter and SQLite, designed to empower accountants and small businesses with an all-in-one financial solution. Core features include invoice generation, budget planning, income and expense tracking, multi-currency support, and advanced financial reporting. What makes this app truly unique is its **integrated intelligent accounting chatbot**, acting as a smart assistant that helps users manage transactions, answer accounting-related queries, and provide insights in real time. By combining a clean architecture with AI-powered interaction, Work Accounts offers both reliability and innovation, making financial management smarter and more intuitive.",
     technologies: ["Flutter", "Sqflite", "Dart", "RESTFUL API"],
-    link: "#",
+    link: "",
     github: "",
     video: "https://www.youtube.com/watch?v=-BzM9Db5n_g",
     type: "mobile",
@@ -48,7 +48,7 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
     description: "Flutter mobile app connected to PHP backend for inventory monitoring and warehouse management.",
     fullDescription: "Complete warehouse management solution with Flutter mobile app and PHP backend. Features include inventory tracking, stock level monitoring, barcode scanning, order management, supplier management, and real-time reporting. The system helps businesses optimize their warehouse operations and reduce inventory costs.",
     technologies: ["Flutter", "PHP", "MySQL", "REST API"],
-    link: "#",
+    link: "",
     downloadUrl:"https://t.me/mosallah47/3",
     github: "https://github.com/MoSallah21/warehouses_app",
     video: "https://youtu.be/6eETaRxAC0I",
@@ -151,7 +151,7 @@ const ImageCarousel = ({ images, projectTitle }) => {
       >
         <img 
           src={images[currentImage]} 
-          alt={`${projectTitle} - صورة ${currentImage + 1}`}
+          alt={`${projectTitle} -  ${currentImage + 1}`}
           className="w-full h-full object-cover transition-all duration-500 group-hover/carousel:scale-105"
           onError={(e) => {
             e.target.src = `https://via.placeholder.com/600x400/1e293b/3b82f6?text=${encodeURIComponent(projectTitle)}`;
@@ -196,7 +196,7 @@ const ImageCarousel = ({ images, projectTitle }) => {
         {/* Swipe indicator for mobile */}
         <div className="absolute top-2 right-2 sm:hidden">
           <div className="bg-slate-900/60 backdrop-blur-sm text-cyan-300 text-xs px-2 py-1 rounded-full">
-            ⇄ اسحب
+            ⇄ Scroll
           </div>
         </div>
       </div>
@@ -210,7 +210,7 @@ export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const navigate = useNavigate(); // إضافة hook للتوجيه
+  const navigate = useNavigate(); 
 
   // Detect mobile device
   useEffect(() => {
@@ -224,14 +224,9 @@ export default function Portfolio() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // دالة للانتقال لصفحة تفاصيل المشروع
   const openProjectDetail = (project) => {
-    if (project.link && project.link !== "#") {
-      window.open(project.link, '_blank');
-    } else {
-      // الانتقال لصفحة التفاصيل مع تمرير بيانات المشروع
       navigate(`/project/${project.id}`, { state: { project } });
-    }
+
   };
 
   useEffect(() => {

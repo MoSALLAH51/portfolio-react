@@ -33,7 +33,6 @@ export default function ProjectDetailPage() {
     window.addEventListener('resize', checkMobile);
 
     const handleMouseMove = (e) => {
-      // إخفاء المؤشر المخصص على الموبايل
       if (!isMobile) {
         setMousePosition({ x: e.clientX, y: e.clientY });
       }
@@ -213,7 +212,7 @@ export default function ProjectDetailPage() {
               <div className="relative w-full aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/10] xl:aspect-[2/1] max-h-[400px] md:max-h-[500px] lg:max-h-[600px] xl:max-h-[700px] rounded-xl md:rounded-2xl overflow-hidden bg-slate-800 shadow-2xl shadow-blue-500/10 border border-blue-500/20">
                 <img 
                   src={projectData.images[currentImage]} 
-                  alt={`${projectData.title} - Image ${currentImage + 1}`}
+                  alt={`${projectData.title} - ${currentImage + 1}`}
                   className="w-full h-full object-cover transition-all duration-700 group-hover/gallery:scale-105"
                   onError={(e) => {
                     e.target.src = `https://via.placeholder.com/1200x600/1e293b/64748b?text=${encodeURIComponent(projectData.title)}`;
@@ -353,7 +352,7 @@ export default function ProjectDetailPage() {
                   </Button>
                 )}
 
-                {projectData.link && projectData.link.trim() !== "" && (
+                {projectData.link?.trim().length > 0 && (
                   <Button 
                     className="group bg-gradient-to-r from-purple-600 to-indigo-500 hover:from-purple-500 hover:to-indigo-400 px-6 py-3 md:px-12 md:py-6 text-sm md:text-xl rounded-full shadow-2xl shadow-purple-500/25 hover:shadow-indigo-400/25 transition-all duration-300 hover:scale-110 w-full max-w-sm md:max-w-none md:w-auto border border-purple-400/30 hover:border-indigo-400/50"
                     onClick={() => window.open(projectData.link, '_blank')}
@@ -363,6 +362,7 @@ export default function ProjectDetailPage() {
                     <ExternalLink className="w-4 h-4 md:w-6 md:h-6 ml-2 md:ml-3 group-hover:animate-bounce" />
                   </Button>
                 )}
+
 
                 {projectData.downloadUrl && projectData.downloadUrl !== "" && (
                   <Button 
