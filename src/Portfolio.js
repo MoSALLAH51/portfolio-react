@@ -1,7 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "./components/ui/Card";
 import { Button } from "./components/ui/Button";
-import { Mail, Github, Linkedin, ExternalLink, Code, Smartphone, Database, ChevronDown, Star, Zap, Rocket, ChevronLeft, ChevronRight, Play, X, Menu } from "lucide-react";
+import { 
+  Mail, 
+  Github, 
+  Linkedin, 
+  ExternalLink, 
+  Code, 
+  Smartphone, 
+  Database, 
+  ChevronDown, 
+  Star, 
+  Zap, 
+  Rocket, 
+  ChevronLeft, 
+  ChevronRight, 
+  Play, 
+  X, 
+  Menu, 
+  Cpu,       
+  Palette, 
+ Instagram   ,
+  Users      
+} from "lucide-react";
 import { useNavigate } from "react-router-dom"; 
 
 const projects = [
@@ -78,16 +99,103 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
     ]
 }
 ];
+const aiProjects = [
+  {
+    id: 10,
+    title: "Logos",
+    description: "A collection of AI-generated logos for brands and creative projects.",
+    fullDescription: "This project showcases multiple logo concepts created with AI tools. Each design highlights different brand styles and modern aesthetics.",
+    technologies: ["AI Design", "Branding"],
+    link: "",
+    github: "",
+    video: "",
+    type: "design",
+    gradient: "from-pink-400 via-red-500 to-yellow-500",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FLogo.png?alt=media&token=d93103f4-49aa-4be4-8f8d-f1a8162bef60",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FFeature%20Graphic.png?alt=media&token=e59530f9-fb59-4c03-8016-6cbfda68eed5",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2F20727259-6929-44b6-9294-4666a1ded7e1.png?alt=media&token=dd5f4271-33f7-4863-9e9c-5c08371b4f88",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2Fphoto_2025-09-23_14-18-40.jpg?alt=media&token=2f314600-5bf2-4a74-a1a9-7d7cb4671d1e",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FChatGPT%20Image%20Jul%2026%2C%202025%2C%2002_04_37%20AM.png?alt=media&token=f5312d28-8cdd-4223-932a-764de4f68037",
+
+    ]
+  },
+  {
+    id: 11,
+    title: "Social Media",
+    description: "AI-edited and curated videos for Instagram campaigns.",
+    fullDescription: "This project includes short-form videos created with AI editing tools and tailored for social media engagement.",
+    technologies: ["AI Photos","AI Video", "Social Media"],
+    link: "", 
+    github: "",
+    video: "",
+    type: "social",
+    gradient: "from-blue-400 via-purple-500 to-pink-500",
+    images: [
+        "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FChatGPT%20Image%20Jun%2020%2C%202025%2C%2006_14_41%20PM.png?alt=media&token=9d16c700-307a-4d03-8331-7f4b5198141c",
+        "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FChatGPT%20Image%20Jun%206%2C%202025%2C%2001_52_43%20AM.png?alt=media&token=320f2f42-4e10-4122-b656-623f6fc3d244",
+        "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2Fimage1.png?alt=media&token=045a2d6c-2842-4417-899e-e6fd95f7b1d9",
+        "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2Fphoto_2025-08-16_00-29-02.jpg?alt=media&token=014ee22d-611a-4113-8241-79a4adeb6d02",
+        "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FGreen%20and%20White%20Photo%20Grid%20Web%20Design%20Services%20Instagram%20Post.png?alt=media&token=fcf0014a-8883-4a73-b7f3-ce9667a7eefe",
+        "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FChatGPT%20Image%20May%2010%2C%202025%2C%2008_49_53%20PM.png?alt=media&token=a63ad368-24d3-4c34-b3a2-ded9f0997a30","https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2Fcover_picture_blog.webp?alt=media&token=4c1daa51-4e43-4295-beef-13e0d1056828",
+
+    ]
+  },
+  {
+    id: 12,
+    title: "Icons",
+    description: "Set of unique icons designed using AI tools.",
+    fullDescription: "Custom iconography generated with AI to represent apps, websites, and social platforms.",
+    technologies: ["AI Design", "UI/UX"],
+    link: "",
+    github: "",
+    video: "",
+    type: "design",
+    gradient: "from-green-400 via-teal-500 to-blue-500",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2F7passengers.png?alt=media&token=796e142a-e144-496e-b4ca-c41562dd5ecf",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2F15passengers.png?alt=media&token=49411c0b-3320-42e4-802a-3223dade38dc",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2F30passengers.png?alt=media&token=32fbdd7e-5822-4aaa-9cad-79344a9b3f7d",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2Fcar_flat.png?alt=media&token=5cde7530-8b4e-4c0e-a318-303e30082c63",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2Fdouble_bus.png?alt=media&token=a6774968-2db5-4599-9d17-c22e5ee4c270",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2F81ba2e34-2f43-41cb-ac58-8421d943c1d7.png?alt=media&token=bbf29939-48a5-48ab-9bec-20bcdd0e960c",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FGemini_Generated_Image_g3jorg3jorg3jorg-removebg-preview.png?alt=media&token=d92902b6-2545-4b8a-a6c0-b60ac62cee45"
+    ]
+  },
+  {
+    id: 13,
+    title: "Mockups",
+    description: "Product and brand mockups generated with AI.",
+    fullDescription: "Creative mockups showcasing packaging, branding, and promotional visuals using AI-assisted design.",
+    technologies: ["AI Mockups", "Branding"],
+    link: "",
+    github: "",
+    video: "",
+    type: "ai",
+    gradient: "from-yellow-400 via-orange-500 to-red-500",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FChatGPT%20Image%20Jun%208%2C%202025%2C%2008_26_06%20PM.png?alt=media&token=c09b737d-02e1-4404-9ff7-ba87e27ea162",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2FChatGPT%20Image%20Jun%208%2C%202025%2C%2007_14_43%20PM.png?alt=media&token=1e4254fd-f52d-4c44-aec2-85adbc00bb72",
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/ai%2Fbc4a1562-8a87-45b1-b60e-00c9c1e222ae89.png?alt=media&token=32d3a8ee-cd48-4504-8ee6-80190c577dbd",
+    ]
+  }
+];
+
 
 const skills = [
   { name: "Flutter", icon: "📱" },
   { name: "Javascript", icon: "⚛️" },
+  { name: "Java", icon: "☕" },
   { name: "PHP", icon: "🐘" },
   { name: "Python", icon: "🐍" },
   { name: "Firebase", icon: "🔥" },
-  { name: "MySQL", icon: "🗄️" }
+  { name: "MySQL", icon: "🗄️" },
+  { name: "ChatGPT", icon: "🤖" },
+  { name: "Gemini", icon: "💎" },
+  { name: "Claude", icon: "🧠" },
+  { name: "Canva", icon: "🎨" },
+  { name: "CapCut", icon: "🎬" }
 ];
-
 const getProjectIcon = (type) => {
   switch(type) {
     case 'mobile': 
@@ -96,10 +204,17 @@ const getProjectIcon = (type) => {
       return <Code className="w-4 h-4 sm:w-6 sm:h-6" />;
     case 'dataset': 
       return <Database className="w-4 h-4 sm:w-6 sm:h-6" />;
+    case 'ai':
+      return <Cpu className="w-4 h-4 sm:w-6 sm:h-6" />;
+    case 'design':
+      return <Palette className="w-4 h-4 sm:w-6 sm:h-6" />;
+    case 'social':
+      return <Users className="w-4 h-4 sm:w-6 sm:h-6" />;
     default: 
       return <Database className="w-4 h-4 sm:w-6 sm:h-6" />;
   }
 };
+
 
 // Image Carousel Component - Mobile Optimized
 const ImageCarousel = ({ images, projectTitle }) => {
@@ -144,7 +259,7 @@ const ImageCarousel = ({ images, projectTitle }) => {
   return (
     <div className="relative mb-4 sm:mb-6 group/carousel">
       <div 
-        className="relative h-32 sm:h-48 rounded-lg sm:rounded-xl overflow-hidden bg-slate-800 border border-blue-500/20 touch-pan-y"
+        className="relative min-h-32 sm:min-h-48 max-h-64 sm:max-h-96 rounded-lg sm:rounded-xl overflow-hidden bg-slate-800 border border-blue-500/20 touch-pan-y flex items-center justify-center"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -152,7 +267,7 @@ const ImageCarousel = ({ images, projectTitle }) => {
         <img 
           src={images[currentImage]} 
           alt={`${projectTitle} -  ${currentImage + 1}`}
-          className="w-full h-full object-cover transition-all duration-500 group-hover/carousel:scale-105"
+          className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/carousel:scale-105"
           onError={(e) => {
             e.target.src = `https://via.placeholder.com/600x400/1e293b/3b82f6?text=${encodeURIComponent(projectTitle)}`;
           }}
@@ -393,6 +508,7 @@ export default function Portfolio() {
                 Get In Touch
               </Button>
             </a>
+            
 
             <Button variant="outline" className="group border-2 border-cyan-400 text-cyan-300 hover:bg-cyan-500 hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/20 w-full sm:w-auto">
               <Code className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-spin" />
@@ -409,6 +525,10 @@ export default function Portfolio() {
               className="group text-cyan-300 hover:text-cyan-200 transition-all duration-300 hover:scale-125 hover:drop-shadow-lg">
               <Linkedin className="w-8 h-8 sm:w-10 sm:h-10 group-hover:animate-pulse" />
             </a>
+              <a href="https://www.instagram.com/_mo.the.coach?igsh=dXBicmt4d244Y3g4"  // ضع هنا اسم حسابك
+    className="group text-cyan-300 hover:text-cyan-200 transition-all duration-300 hover:scale-125 hover:drop-shadow-lg">
+    <Instagram className="w-8 h-8 sm:w-10 sm:h-10 group-hover:animate-pulse" />
+  </a>
           </div>
           
           <div className="absolute bottom-4 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
@@ -516,6 +636,89 @@ export default function Portfolio() {
                         </Button>
                       )}
                     </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="other-projects" className="py-12 sm:py-20 px-4 sm:px-6 relative">
+        <div className="max-w-6xl mx-auto">
+          <div 
+            data-animate
+            id="other-projects-title"
+            className={`text-center mb-8 sm:mb-16 transition-all duration-1000 transform ${
+              isVisible['other-projects-title'] ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+            }`}
+          >
+            <h2 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent" style={{
+              textShadow: '0 0 30px rgba(34, 211, 238, 0.3)'
+            }}>
+              AI Creative Work
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-200">A collection of AI-generated designs and experiments</p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
+            {aiProjects.map((aiProjects, index) => (
+              <Card 
+                key={index} 
+                data-animate
+                id={`other-project-${index}`}
+                className={`group bg-slate-800/40 backdrop-blur-sm border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 hover:shadow-cyan-400/25 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
+                  isVisible[`other-project-${index}`] ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <CardContent className="p-4 sm:p-8 relative overflow-hidden">
+                  <div className={`absolute top-0 right-0 w-16 h-16 sm:w-32 sm:h-32 bg-gradient-to-br ${aiProjects.gradient} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity duration-500`}></div>
+                  
+                  <div className="flex items-start justify-between mb-4 sm:mb-6 relative z-10">
+                    <div className="flex items-center gap-2 sm:gap-4 flex-1">
+                      <div className={`p-2 sm:p-3 rounded-lg sm:rounded-xl bg-gradient-to-r ${aiProjects.gradient} shadow-lg shadow-cyan-500/30 group-hover:animate-pulse border border-cyan-400/30`}>
+                        {getProjectIcon(aiProjects.type)}
+                      </div>
+                      <h3 className="text-lg sm:text-2xl font-bold text-cyan-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-blue-400 group-hover:bg-clip-text transition-all duration-300 leading-tight">
+                        {aiProjects.title}
+                      </h3>
+                    </div>
+                    <Star className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 group-hover:animate-spin flex-shrink-0" />
+                  </div>
+                  
+                  {/* Project Images Carousel */}
+                  <ImageCarousel images={aiProjects.images} projectTitle={aiProjects.title} />
+                  
+                  <p className="text-sm sm:text-base text-blue-200 mb-4 sm:mb-6 leading-relaxed group-hover:text-cyan-100 transition-colors duration-300">
+                    {aiProjects.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-8">
+                    {aiProjects.technologies.slice(0, isMobile ? 4 : aiProjects.technologies.length).map((tech, techIndex) => (
+                      <span 
+                        key={techIndex} 
+                        className="px-2 sm:px-4 py-1 sm:py-2 bg-slate-700/50 text-xs sm:text-sm rounded-full text-cyan-200 border border-cyan-500/30 group-hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:bg-cyan-500/20"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {isMobile && aiProjects.technologies.length > 4 && (
+                      <span className="px-2 py-1 bg-slate-700/50 text-xs rounded-full text-cyan-200 border border-cyan-500/30">
+                        +{aiProjects.technologies.length - 4}
+                      </span>
+                    )}
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <Button 
+                      className={`flex-1 bg-gradient-to-r ${aiProjects.gradient} hover:shadow-lg hover:shadow-cyan-400/30 transition-all duration-300 hover:scale-105 group/btn border border-cyan-400/30 text-sm sm:text-base py-2 sm:py-3`}
+                      onClick={() => openProjectDetail(aiProjects)}
+                    >
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-2 group-hover/btn:animate-bounce" />
+                      View Project
+                    </Button>
+                    
+
                   </div>
                 </CardContent>
               </Card>

@@ -8,13 +8,10 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {/* الصفحة الرئيسية */}
           <Route path="/" element={<Portfolio />} />
           
-          {/* صفحة تفاصيل المشروع */}
           <Route path="/project/:id" element={<ProjectDetailPage />} />
           
-          {/* صفحة 404 في حالة عدم العثور على الطريق */}
           <Route path="*" element={
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white flex items-center justify-center">
               <div className="text-center">

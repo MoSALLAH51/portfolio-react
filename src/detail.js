@@ -209,11 +209,11 @@ export default function ProjectDetailPage() {
               }`}
             >
               {/* صورة بنسبة عرض إلى ارتفاع مثالية */}
-              <div className="relative w-full aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/10] xl:aspect-[2/1] max-h-[400px] md:max-h-[500px] lg:max-h-[600px] xl:max-h-[700px] rounded-xl md:rounded-2xl overflow-hidden bg-slate-800 shadow-2xl shadow-blue-500/10 border border-blue-500/20">
+              <div className="relative w-full min-h-[300px] md:min-h-[400px] max-h-[500px] md:max-h-[700px] rounded-xl md:rounded-2xl overflow-hidden bg-slate-800 shadow-2xl shadow-blue-500/10 border border-blue-500/20 flex items-center justify-center">
                 <img 
                   src={projectData.images[currentImage]} 
                   alt={`${projectData.title} - ${currentImage + 1}`}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover/gallery:scale-105"
+                  className="max-w-full max-h-full object-contain transition-all duration-700 group-hover/gallery:scale-105"
                   onError={(e) => {
                     e.target.src = `https://via.placeholder.com/1200x600/1e293b/64748b?text=${encodeURIComponent(projectData.title)}`;
                   }}
