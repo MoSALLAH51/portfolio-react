@@ -77,7 +77,6 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
     gradient: "from-blue-500 via-cyan-500 to-blue-600",
     images: [
       "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2FChatGPT%20Image%20Aug%2015%2C%202025%2C%2005_57_03%20PM.png?alt=media&token=f3e4b712-8288-49d1-b376-ded9daa620b3",
-      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2Fbc4a1562-8a87-45b1-b60e-00c9c1e2ae89.png?alt=media&token=26ffbf52-fcb2-41b9-8f40-07fccaa1a56a",
       "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2F4b7c37af-4f2b-41af-8705-7f13f963414e.png?alt=media&token=cae77454-fac4-426d-a5b4-de84269c4c74",
       "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2F9bc466f3-f22f-4e3a-b8a5-772bd1232a2b.png?alt=media&token=ebd58aa4-6db0-4382-ab6e-571964ccacfe"
     ]
@@ -180,7 +179,40 @@ const aiProjects = [
     ]
   }
 ];
+const trainingProjects = [
+  {
+    id: 5,
+    title: "Mo Ai Agent",
+    description: "Mo Ai Agent – AI chatbot built with Flutter using Clean Architecture and BLoC, featuring dark/light themes and local chat storage with SQFLite.",
+    fullDescription: "An AI-powered chatbot application built with Flutter, leveraging Clean Architecture, BLoC, and dependency injection for scalable and maintainable code. The app supports both dark and light themes and stores chat history locally using SQFLite, ensuring fast access and offline capabilities. Designed for seamless user interaction, it provides a responsive and intelligent conversational experience.",
+    technologies: ["AI Integration", "Flutter", "Dart", "BLoC Pattern", "Clean Architecture", "SQFLite", "Dependency Injection", "Dark/Light Theme Support"],
+    downloadUrl: "https://t.me/mosallah47/6",
+    github: "https://github.com/MoSallah21/mo_ai_agent",
+    video: "https://youtu.be/2D8D6VSKuUg",
+    type: "mobile",
+    gradient: "from-orange-400 via-pink-500 to-purple-500",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/mo_ai_agent%2F2.jpg?alt=media&token=895c549e-bed8-4475-b4f8-5a7c8d943402"
 
+    ]
+  },
+    {
+    id: 6,
+    title: "Mini-E-Commerce-Appt",
+    description: "A modern Flutter e-commerce app powered by Firebase and Stripe, featuring authentication, product browsing, cart management, and secure payments — built with clean architecture and a focus on scalability",
+    fullDescription: "A modern, full-featured Flutter e-commerce app built with clean architecture, Firebase, and Stripe. This project demonstrates authentication, product browsing, cart functionality, payments, and more — with a focus on scalability, maintainability, and best practices",
+    technologies: ["Flutter", "Firebase", "Dart", "Stripe API", "Clean Architecture", "Provider", "Flutter Local Notifications", "Image Picker & Cropper"],
+    downloadUrl: "https://t.me/mosallah47/6",
+    github: "https://github.com/MoSallah21/Mini-E-Commerce-App",
+    video: "https://www.youtube.com/shorts/wZiNVFVGbk0",
+    type: "mobile",
+    gradient: "from-orange-400 via-pink-500 to-purple-500",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/mini-e-commerce%2F2.jpg?alt=media&token=01fb47f3-c0c6-4221-8724-29793a2e883c"
+
+    ]
+  },
+];
 
 const skills = [
   { name: "Flutter", icon: "📱" },
@@ -643,6 +675,117 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+<section id="training_projects" className="py-12 sm:py-20 px-4 sm:px-6 relative">
+  <div className="max-w-6xl mx-auto">
+    <div 
+      data-animate
+      id="training_projects-title"
+      className={`text-center mb-8 sm:mb-16 transition-all duration-1000 transform ${
+        isVisible['training_projects-title'] ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+      }`}
+    >
+      <h2 
+        className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-purple-300 via-pink-400 to-purple-300 bg-clip-text text-transparent"
+        style={{ textShadow: '0 0 30px rgba(236, 72, 153, 0.3)' }}
+      >
+        Training Projects
+      </h2>
+      <p className="text-lg sm:text-xl text-pink-200">
+        Built during my learning journey
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
+      {trainingProjects.map((project, index) => (
+        <Card 
+          key={index} 
+          data-animate
+          id={`training-project-${index}`}
+          className={`group bg-slate-800/40 backdrop-blur-sm border border-pink-500/20 shadow-2xl shadow-pink-500/10 hover:shadow-pink-400/25 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
+            isVisible[`training-project-${index}`] ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+          }`}
+          style={{ transitionDelay: `${index * 200}ms` }}
+        >
+          <CardContent className="p-4 sm:p-8 relative overflow-hidden">
+            <div className={`absolute top-0 right-0 w-16 h-16 sm:w-32 sm:h-32 bg-gradient-to-br ${project.gradient} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity duration-500`}></div>
+            
+            <div className="flex items-start justify-between mb-4 sm:mb-6 relative z-10">
+              <div className="flex items-center gap-2 sm:gap-4 flex-1">
+                <div className={`p-2 sm:p-3 rounded-lg sm:rounded-xl bg-gradient-to-r ${project.gradient} shadow-lg shadow-pink-500/30 group-hover:animate-pulse border border-pink-400/30`}>
+                  {getProjectIcon(project.type)}
+                </div>
+                <h3 className="text-lg sm:text-2xl font-bold text-pink-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300 leading-tight">
+                  {project.title}
+                </h3>
+              </div>
+              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-pink-400 group-hover:animate-spin flex-shrink-0" />
+            </div>
+            
+            <ImageCarousel images={project.images} projectTitle={project.title} />
+            
+            <p className="text-sm sm:text-base text-pink-200 mb-4 sm:mb-6 leading-relaxed group-hover:text-pink-100 transition-colors duration-300">
+              {project.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-8">
+              {project.technologies.slice(0, isMobile ? 4 : project.technologies.length).map((tech, techIndex) => (
+                <span 
+                  key={techIndex} 
+                  className="px-2 sm:px-4 py-1 sm:py-2 bg-slate-700/50 text-xs sm:text-sm rounded-full text-pink-200 border border-pink-500/30 group-hover:border-pink-400/50 transition-all duration-300 hover:scale-110 hover:bg-pink-500/20"
+                >
+                  {tech}
+                </span>
+              ))}
+              {isMobile && project.technologies.length > 4 && (
+                <span className="px-2 py-1 bg-slate-700/50 text-xs rounded-full text-pink-200 border border-pink-500/30">
+                  +{project.technologies.length - 4}
+                </span>
+              )}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <Button 
+                className={`flex-1 bg-gradient-to-r ${project.gradient} hover:shadow-lg hover:shadow-pink-400/30 transition-all duration-300 hover:scale-105 group/btn border border-pink-400/30 text-sm sm:text-base py-2 sm:py-3`}
+                onClick={() => openProjectDetail(project)}
+              >
+                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-2 group-hover/btn:animate-bounce" />
+                View Project
+              </Button>
+              
+              <div className="flex gap-2 sm:gap-3">
+                {project.github && (
+                  <Button 
+                    variant="outline" 
+                    className="border-pink-500/50 text-pink-300 hover:bg-pink-500/20 hover:border-pink-400 transition-all duration-300 hover:scale-105 group/btn text-sm sm:text-base py-2 sm:py-3 px-3 sm:px-4"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
+                    <Github className="w-3 h-3 sm:w-4 sm:h-4 sm:mr-2 group-hover/btn:animate-spin" />
+                    <span className="hidden sm:inline">Code</span>
+                  </Button>
+                )}
+                
+                {project.video && (
+                  <Button 
+                    variant="outline" 
+                    className="border-purple-500/50 text-purple-300 hover:bg-purple-500/20 hover:text-purple-200 hover:border-purple-400 transition-all duration-300 hover:scale-105 group/btn text-sm sm:text-base py-2 sm:py-3 px-3 sm:px-4"
+                    onClick={() => window.open(project.video, '_blank')}
+                  >
+                    <Play className="w-3 h-3 sm:w-4 sm:h-4 sm:mr-2 group-hover/btn:animate-pulse" />
+                    <span className="hidden sm:inline">Video</span>
+                  </Button>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
       <section id="other-projects" className="py-12 sm:py-20 px-4 sm:px-6 relative">
         <div className="max-w-6xl mx-auto">
           <div 
