@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./components/ui/Button";
 import { ArrowLeft, Github, Play, ChevronLeft, ChevronRight, Star, Zap, ExternalLink, Code, Smartphone, Database, Download, Link } from "lucide-react";
-import { projects } from "./Portfolio";
+import { projects, trainingProjects, aiProjects } from "./Portfolio";
 
 
 import { useParams, useLocation } from "react-router-dom";
-
+const allProjects = [...projects, ...trainingProjects, ...aiProjects];
 const getProjectIcon = (type) => {
   switch(type) {
     case 'mobile': return <Smartphone className="w-6 h-6 md:w-8 md:h-8" />;
@@ -18,7 +18,7 @@ export default function ProjectDetailPage() {
   const { id } = useParams();
   const location = useLocation();
   const passedProject = location.state?.project;
-  const projectData = passedProject || projects.find(p => p.id === parseInt(id));
+  const projectData = passedProject || allProjects.find(p => p.id === parseInt(id));
   const [currentImage, setCurrentImage] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);

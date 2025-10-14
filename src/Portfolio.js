@@ -956,4 +956,4 @@ export default function Portfolio() {
   );
 }
 
-export { projects };
+export { projects, trainingProjects, aiProjects };
