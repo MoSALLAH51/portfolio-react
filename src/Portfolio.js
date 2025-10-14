@@ -77,7 +77,7 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
     gradient: "from-blue-500 via-cyan-500 to-blue-600",
     images: [
       "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2FChatGPT%20Image%20Aug%2015%2C%202025%2C%2005_57_03%20PM.png?alt=media&token=f3e4b712-8288-49d1-b376-ded9daa620b3",
-      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2F4b7c37af-4f2b-41af-8705-7f13f963414e.png?alt=media&token=cae77454-fac4-426d-a5b4-de84269c4c74",
+        "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2F4b7c37af-4f2b-41af-8705-7f13f963414e.png?alt=media&token=cae77454-fac4-426d-a5b4-de84269c4c74",
       "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/eks%2F9bc466f3-f22f-4e3a-b8a5-772bd1232a2b.png?alt=media&token=ebd58aa4-6db0-4382-ab6e-571964ccacfe"
     ]
   },
