@@ -79,8 +79,12 @@ export default function ProjectDetailPage() {
     setCurrentImage((prev) => (prev - 1 + projectData.images.length) % projectData.images.length);
   };
 
-  const goBack = () => {
-    window.history.back();
+const goBack = () => {
+    if (window.history.length > 1 && document.referrer) {
+      window.history.back();
+    } else {
+      window.location.href = 'https://portfolio-react-amber-ten.vercel.app/';
+    }
   };
 
   if (!projectData) {
