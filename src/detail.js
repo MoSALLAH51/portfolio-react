@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./components/ui/Button";
 import { ArrowLeft, Github, Play, ChevronLeft, ChevronRight, Star, Zap, ExternalLink, Code, Smartphone, Database, Download, Link } from "lucide-react";
-import projects from "./Portfolio"; 
+import { projects } from "./Portfolio";
+
+
 import { useParams, useLocation } from "react-router-dom";
 
 const getProjectIcon = (type) => {
