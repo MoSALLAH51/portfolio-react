@@ -31,7 +31,7 @@ const projects = [
   title: "Noor Go",
   description: "Saudi taxi booking app with real-time tracking, Socket integration, and Firebase connectivity.",
   fullDescription: "Noor Go is a feature-rich mobile application tailored for the Saudi Arabian market, offering a fast, modern, and reliable taxi booking experience. Built with a sharp focus on user convenience and real-time interactions, the app bridges passengers and drivers through smooth, low-latency communication and intuitive design. Key features include live GPS tracking, Socket.IO-powered live updates, Firebase integration for secure authentication and cloud storage, and intelligent trip management with support for future payment gateways.",
-  technologies: ["Flutter", "Firebase Authentication", "Firebase Cloud Messaging", "Firebase Storage", "Socket.IO", "Google Maps SDK", "Clean Architecture", "BLoC Pattern"],
+  technologies: ["Flutter", "Firebase Authentication", "Firebase Cloud Messaging", "Firebase Storage","Nest.js","DigitalOcean", "Socket.IO", "Google Maps SDK", "Clean Architecture", "BLoC Pattern"],
   link: "",
   github: "",
   video: "https://youtu.be/p720o-Gj6SI",
@@ -519,15 +519,15 @@ export default function Portfolio() {
           }}>
             MOHAMAD SALLAH
           </h1>
-          
-          <div className="mb-6 sm:mb-8 overflow-hidden">
-            <p className="text-lg sm:text-2xl text-cyan-100 max-w-3xl mx-auto leading-relaxed font-light tracking-wider">
-              CROSS-PLATFORM MOBILE ENGINEER
-            </p>
-            <p className="text-sm sm:text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed mt-2 sm:mt-4 px-2">
-              Specializing in Flutter & AI development with cutting-edge technologies
-            </p>
-          </div>
+<div className="mb-6 sm:mb-8 overflow-hidden">
+  <p className="text-lg sm:text-2xl text-cyan-100 max-w-3xl mx-auto leading-relaxed font-light tracking-wider">
+    Full Stack & Mobile Developer
+  </p>
+  <p className="text-sm sm:text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed mt-2 sm:mt-4 px-2">
+    Expert in Flutter, AI, and modern web technologies
+  </p>
+</div>
+
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 px-4">
             <a 
