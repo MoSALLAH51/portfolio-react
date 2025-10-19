@@ -16,12 +16,11 @@ import {
   ChevronLeft, 
   ChevronRight, 
   Play, 
-  X, 
   Menu, 
   Cpu,       
   Palette, 
- Instagram   ,
-  Users      
+  Instagram,
+  Users
 } from "lucide-react";
 import { useNavigate } from "react-router-dom"; 
 
@@ -127,7 +126,7 @@ const aiProjects = [
     technologies: ["AI Photos","AI Video", "Social Media"],
     link: "", 
     github: "",
-    video: "",
+    video: "https://www.youtube.com/playlist?list=PLejJ6Vaa26GiSmJ2qvI4hSwPtGfTAjmha",
     type: "social",
     gradient: "from-blue-400 via-purple-500 to-pink-500",
     images: [
