@@ -95,7 +95,74 @@ fullDescription: "Work Accounts is a comprehensive ERP-style accounting applicat
     images: [
       "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/mo%20football%2FPremier_League_Logo.svg.png?alt=media&token=8449e33f-62dd-4894-aa79-da1c2a97d19d"
     ]
-}
+},
+  {   
+    id: 5, 
+    title: "Esnad Tax UAE",
+    description: "Developed a responsive company website for Esnad Tax UAE, showcasing accounting, tax, and consultancy services with a clean and professional layout.",
+    fullDescription: "Designed and developed a modern responsive website for Esnad Tax UAE using HTML, CSS, JavaScript, and Bootstrap. The platform highlights the company’s financial, accounting, and tax services with clear navigation, professional visuals, and smooth user experience. The goal was to reflect trust, transparency, and expertise while providing clients with easy access to essential information and contact options.",
+  technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    link: "https://www.esnadtax.com/", 
+    github: "", 
+    video: "", 
+    type: "web",
+    gradient: "from-green-400 via-lime-500 to-yellow-500",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F5.jpg?alt=media&token=e5d0c934-e1c3-4565-975f-3ee1ba0252c5",
+       "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F6.jpg?alt=media&token=f65716e2-636f-44b2-9cf0-3577e397a40c"
+
+    ]
+},
+{   
+  id: 6, 
+  title: "EBDAA Stationery Website",
+  description: "Designed a modern stationery landing page with a built-in cart preview and clean responsive layout.",
+  fullDescription: "Created a professional landing page for a stationery brand to showcase products and engage customers. The website includes a product gallery, a simple cart preview, and smooth navigation to simulate an e-commerce experience. Built with React, Nest.js, and JavaScript, and styled using Bootstrap for responsiveness and modern visuals.",
+  technologies: ["React", "Nest.js", "JavaScript", "Bootstrap"],
+  link: "https://www.ebdaa-stationery.com/", 
+  github: "", 
+  video: "", 
+  type: "web",
+  gradient: "from-green-400 via-lime-500 to-yellow-500",
+  images: [
+    "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F7.jpg?alt=media&token=18ae6f19-4e11-4593-b590-cfd145853b6b",
+    "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F8.jpg?alt=media&token=a99023ac-d188-4eaa-9656-2547672573c9"
+  ]
+},
+
+{   
+  id: 7, 
+  title: "ZEININA Graphic Designers Website",
+  description: "Developed a creative portfolio website for a graphic design team to showcase their projects and visual identity.",
+  fullDescription: "Built a modern and visually appealing website for ZEININA, a creative team of graphic designers. The site highlights their portfolio, services, and artistic vision with smooth transitions, responsive layouts, and a focus on branding. Developed using React, Next.js, TypeScript, and JavaScript to ensure high performance and SEO optimization.",
+  technologies: ["React", "Next.js", "TypeScript", "JavaScript"],
+  link: "https://zeinina.vercel.app/", 
+  github: "", 
+  video: "", 
+  type: "web",
+  gradient: "from-purple-400 via-pink-500 to-red-500",
+  images: [
+    "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F1.jpg?alt=media&token=a07d3d3f-6dd4-4ae5-bd4a-2c1151fa0260",
+    "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F2jpg.jpg?alt=media&token=8353bbe3-c8f6-4a00-b1c9-699c1e56c7f0"
+  ]
+},
+{   
+  id: 5, 
+  title: "Noor Go Dashboard Web Admin Panel",
+  description: "Developed an advanced admin dashboard for managing Noor Go platform data, users, and operations efficiently.",
+  fullDescription: "Created a responsive and dynamic admin dashboard for Noor Go to handle user management, ride tracking, and platform analytics. The panel provides a clean interface with organized data tables, filtering, and real-time updates for better operational control. Built using React, Next.js, TypeScript, and JavaScript to ensure smooth performance and scalability.",
+  technologies: ["React", "Next.js", "TypeScript", "JavaScript"],
+  link: "https://noor-dashboard-plum.vercel.app/", 
+  github: "", 
+  video: "", 
+  type: "web",
+  gradient: "from-sky-400 via-cyan-500 to-blue-600",
+  images: [
+    "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F3.jpg?alt=media&token=f1131c6e-6922-4fd6-aa78-e3a3f6a66f4a",
+    "https://firebasestorage.googleapis.com/v0/b/football-platform-eddc3.appspot.com/o/web%2F4.jpg?alt=media&token=78194b46-dd6a-4d99-9bfa-49fd2caf78ba"
+  ]
+},
+
 ];
 const aiProjects = [
   {
@@ -180,7 +247,7 @@ const aiProjects = [
 ];
 const trainingProjects = [
   {
-    id: 5,
+    id: 14,
     title: "Mo Ai Agent",
     description: "Mo Ai Agent – AI chatbot built with Flutter using Clean Architecture and BLoC, featuring dark/light themes and local chat storage with SQFLite.",
     fullDescription: "An AI-powered chatbot application built with Flutter, leveraging Clean Architecture, BLoC, and dependency injection for scalable and maintainable code. The app supports both dark and light themes and stores chat history locally using SQFLite, ensuring fast access and offline capabilities. Designed for seamless user interaction, it provides a responsive and intelligent conversational experience.",
@@ -196,7 +263,7 @@ const trainingProjects = [
     ]
   },
     {
-    id: 6,
+    id: 15,
     title: "Mini-E-Commerce-Appt",
     description: "A modern Flutter e-commerce app powered by Firebase and Stripe, featuring authentication, product browsing, cart management, and secure payments — built with clean architecture and a focus on scalability",
     fullDescription: "A modern, full-featured Flutter e-commerce app built with clean architecture, Firebase, and Stripe. This project demonstrates authentication, product browsing, cart functionality, payments, and more — with a focus on scalability, maintainability, and best practices",
